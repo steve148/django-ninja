@@ -96,7 +96,7 @@ def test_tags():
     assert glob["tags"] == ["global"]
 
     e1 = schema["paths"]["/api/first/second/endpoint_1"]["get"]
-    assert e1["tags"] == ["one"]
+    assert e1["tags"] == ["one", "global"]
 
     e2 = schema["paths"]["/api/first/second/endpoint_2"]["get"]
-    assert e2["tags"] == ["two"]
+    assert e2["tags"] == ["two", "global"]
